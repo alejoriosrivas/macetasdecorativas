@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Caveat:wght@700&family=Open+Sans:wght@300;400;600&family=Open+Sans+Condensed:wght@300&family=Roboto+Condensed:wght@400;700&family=Barlow+Condensed:wght@300;400;500&display=swap');
+
+/* * {
+    border: 1px solid red;
+} */
+a:hover {
+    cursor: pointer;
+}
+button {
+    outline: none;
+    border: none;
+    border-radius: 0;
+}
+:root {
+    /* family */
+    --robotoCondensed: 'Roboto Condensed', sans-serif;
+    --badScript: 'Bad Script', cursive;
+    --caveat: 'Caveat', cursive;
+    --openSans: 'Open Sans', sans-serif;
+    --SansCondensed: 'Open Sans Condensed', sans-serif;
+    --barlowCondensed: 'Barlow Condensed', sans-serif;
+    /* sizes */
+    --logo-sz: 30px;
+    --list-sz: 17px;
+    --title-sz: 45px;
+    --subtitle-sz: 35px;
+    --quest-sz: 25px;
+    --productName-sz: 25px;
+    --button-sz: 22px;
+    --text-sz: 20px;
+    /* colors */
+    --textShadowFuerte: 0 0 6px rgba(0, 0, 0, 1);
+    --textShadowSuavizado: 0 1px 3px rgba(0, 0, 0, 0.200);
+    --textShadow: 0 0 2px rgba(0, 0, 0, 0.500);
+    --boxShadow: 0 3px 6px rgba(0, 0, 0, 0.300);
+    /* verdes */
+    --lima: #a5f531; --limaActive: #76b101; --limaHover: #6dbb30;
+    --greenTres-e: #16d81f;
+    /* fin verdes */
+    /* dark */
+    --black: black;
+    --gray: #7c7c7c;
+    --dark: #2f2f2f;
+    --darkGray: #242424;
+    /* fin dark */
+    --whiteGray: #F3F3F3;
+    --white: white;
+    --blackTransparent: rgba(0, 0, 0, 0.609);
+}
+/* script */
+/* body {
+    font-family: var(--robotoCondensed);
+} */
+
+/* ================================== */
+/* PROPIEDADES GLOBALES */
+/* sombras */
+.subscribe h2,
+.subscribe p {
+    text-shadow: var(--textShadowFuerte);
+}
+/* fin sombras */
+/* ================================== */
+
+.logo a {
+    text-decoration: none;
+    font-family: var(--SansCondensed);
+}
+h1 {
+    font-family: var(--badScript), cursive;
+}
+button {
+    cursor: pointer;
+}
+h2, 
+h3{
+    font-weight: 600;
+    font-family: var(--barlowCondensed);
+}
+h2 {
+    text-shadow: var(--textShadowSuavizado);
+    margin: 30px 0;
+}
+h3 {
+    margin: 20px 0;
+}
+p,  
+a,
+button {
+    font-family: var(--robotoCondensed);
+}
+/* ================================== */
+/* los inputs del formulario y el newsletter */
+.sendEmail input, 
+.form_compra_inputs input,
+.form_ubicacion_ciudad select {
+    border: none;
+    outline: none;
+    transition: .3s;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: var(--darkGray);
+    font-size: var(--text-sz);
+    font-family: var(--barlowCondensed);
+}
+.sendEmail input:focus, 
+.form_compra_inputs input:focus {
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.sendEmail input::placeholder, 
+.form_compra_inputs input::placeholder {
+    font-weight: 400;
+    letter-spacing: .5px;
+    color: rgb(177, 177, 177);
+}
+/* FIN PROPIEDADES GLOBALES */
+/* ================================== */
+/* nav */
+.nav_js {
+    background-color: #ffffffec;
+    height: 90px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.212);
+}
+.logo_js {
+    color: var(--black) !important;
+    margin-left: 34px !important;
+}
+.listMargin_js {
+    margin-right: 33px !important;
+}
+.list_js {
+    color: var(--black) !important;
+    margin-left: 30px !important;
+}
+.list_js:hover {
+    color: var(--white) !important;
+    background-color: var(--black) !important;
+}
+/* fin nav */
+/* products */
+.redimension {
+    height: 50% !important;
+}
+/* fin products */
+/* fin script */
+/* ------------------------ Menu */
+nav {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+    background-color: var(--blackTransparent);
+    /* box-shadow: 0 6px 6px rgba(0, 0, 0, 0.514); */
+}
+nav .logoContainer a {
+    letter-spacing: 2px;
+    /* font-family: var(--SansCondensed); */
+    color: var(--greenTres-e);
+    font-size: var(--logo-sz);
+    margin-left: 25px;
+    font-weight: bold;
+    transition: .5s;
+}
+nav .listContainer {
+    transition: .3s;
+    margin-right: 18px;
+    font-size: var(--list-sz);
+}
+nav div ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+nav div ul li a {
+    letter-spacing: 2px;
+    /* font-family: var(--SansCondensed); */
+    font-weight: 400;
+    padding: 15px;
+    /* margin: 5px; */
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+}
+/* nav div ul li a, */
+nav div ul li a:hover {
+    color: var(--black);
+    background-color: var(--white);
+}
+/* ------------------------ Fin menu */
+/* ------------------------ Section 1 */
+.secHome {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../img/bg.jpg');
+}
+.home {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.418);
+    grid-template-columns: [izquierda] 1.5fr [izquierda-end] 2fr [derecha];
+}
+.welcomeTitle {
+    grid-column: izquierda-end / derecha;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+.welcomeTitle h1 {
+    padding: 10px;
+    color: var(--white);
+    font-size: var(--title-sz);
+    margin-bottom: 250px;
+    text-align: center;
+    max-width: 600px;
+}
+/* ------------------------ Fin section 1 */
+/* ------------------------ Section 2 */
+.secMore {
+    display: grid;
+}
+.more {
+    padding: 0 10px;
+    max-width: 1200px;
+    justify-self: center;
+}
+.subtitle {
+    text-align: center;
+    justify-self: center;
+    grid-column: subtitle;
+    letter-spacing: 1px;
+}
+.subtitle h2 {
+    font-size: var(--subtitle-sz);
+}
+/* ------------------------ Productos */
+.productosContainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 300px));
+    grid-gap: 20px;
+    justify-content: center;
+}
+.producto {
+    position: relative;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.600);
+}
+.producto .productoImage {
+    width: 100%;
+    overflow: hidden;
+}
+.producto figure img {
+    width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+    object-position: top;
+    /* transition: .8s; */
+}
+/* .producto figure img:hover {
+    object-position: center;
+} */
+.producto .description {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.220);
+    transition: .4s;
+}
+.description:hover {
+    background-color: rgba(0, 0, 0, 0.400);
+}
+.description h3 {
+    margin: 0;
+    height: 80%;
+    opacity: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    font-size: var(--productName-sz);
+    font-family: var(--barlowCondensed);
+    font-weight: 400;
+}
+.description h3:hover {
+    opacity: 100%;
+}
+.description .boton {
+    height: 20%;
+    top: 0;
+    transition: .3s;
+}
+.boton a button {
+    height: 100%;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: .5s;
+    color: var(--gray);
+    background-color: var(--darkGray);
+    font-size: var(--button-sz);
+    font-family: var(--barlowCondensed);
+}
+.boton a button:hover {
+    background-color: var(--greenTres-e);
+    color: white;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+/* ------------------------ Fin productos */
+/* Faq */
+.faq {
+    margin-bottom: 30px;
+    justify-self: left;
+}
+.faqTitle {
+    justify-self: center;
+}
+.faqTitle h2 {
+    font-size: var(--subtitle-sz);
+}
+.quest h3 {
+    letter-spacing: 1px;
+    font-size: var(--quest-sz);
+    font-weight: bold;
+}
+.quest p {
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: var(--text-sz);
+}
+/* fin faq */
+/* ------------------------ Fin section 2 */
+/* ------------------------ Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--darkGray);
+    height: 350px;
+}
+.footerContent {
+    height: 100%;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.subscribe {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.subscribe h2 {
+    margin: 0;
+    letter-spacing: 8px;
+    font-size: var(--subtitle-sz);
+}
+.subscribe p {
+    width: 80%;
+    font-size: var(--text-sz);
+}
+.sendEmail {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: minmax(100px, 300px) 100px;
+}
+.sendEmail input:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.500);
+}
+.sendEmail input:focus {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 1);
+    /* color: var(--lima); */
+}
+.sendEmailBtn {
+    text-transform: capitalize;
+    color: white;
+    border-radius: 10px;
+    padding: 15px 20px;
+    transition: .2s;
+    background-color: var(--dark);
+    font-size: var(--button-sz);
+    font-family: var(--robotoCondensed);
+    box-shadow: var(--boxShadow);
+}
+.sendEmailBtn:hover {
+    color: black;
+    background-color: var(--lima);
+}
+.sendEmailBtn:active{
+    background-color: var(--limaActive);
+}
+.footerContent .designers {
+    margin: 10px 0;
+    width: 100%;
+    bottom: 0;
+    letter-spacing: 2px;
+    position: absolute;
+    color: var(--gray);
+}
+.designers span {
+    letter-spacing: 4px;
+}
+/* ------------------------ Fin footer */

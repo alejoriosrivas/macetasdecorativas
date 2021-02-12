@@ -1,0 +1,26 @@
+.faq_body_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 1000px;
+}
+.faq_container {
+    background-color: var(--whiteGray);
+    width: 800px;
+    padding: 50px;
+    margin: 10px;
+}
+.faq_title {
+    margin-bottom: 50px;
+    text-align: center;
+}
+.faq_title h1 {
+    font-size: var(--title-sz);
+    font-family: var(--barlowCondensed);
+}
+.pregunta h2 {
+    font-size: var(--subtitle-sz);
+}
+.pregunta p {
+    font-size: var(--text-sz);
+}

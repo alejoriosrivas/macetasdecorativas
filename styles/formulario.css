@@ -1,0 +1,85 @@
+/* * {
+    border: 1px solid red;
+} */
+.form_body_container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form_container {
+    background-color: var(--whiteGray);
+    padding: 30px;
+    margin: 50px 10px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.300);
+}
+.form_compra {
+    display: grid;
+    grid-row-gap: 30px;
+    grid-template-columns: minmax(400px, 800px);
+}
+.form_compra_title h2 {
+    font-size: var(--subtitle-sz);
+    padding: 10px;
+}
+.form_compra_inputs {
+    display: grid;
+    grid-template-columns: minmax(100px, 150px) auto;
+    align-items: center;
+    grid-gap: 20px 10px;
+}
+/* .form_compra_inputs input {
+} */
+.form_compra_inputs input:hover,
+.form_ubicacion_ciudad select:hover {
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.400); */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.400);
+}
+.form_compra_inputs input:active {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.400);
+}
+.form_compra_inputs label {
+    font-size: var(--text-sz);
+    font-family: var(--robotoCondensed);
+}
+/* .form_compra_inputs input,
+.form_ubicacion_ciudad select {
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.200);
+    background-color: white;
+} */
+.form_ubicacion_ciudad,
+.form_ubicacion_casa {
+    grid-column: 1 / 2 span;
+    display: grid;
+    grid-template-columns: minmax(100px, 150px) auto 80px auto;
+    grid-column-gap: 10px;
+}
+.form_ubicacion_ciudad label,
+.form_ubicacion_casa label {
+    align-self: center;
+    word-break: break-all;
+}
+/* .form_ubicacio_ciudad select::after {
+    padding: 5px;
+} */
+.form_compra_boton {
+    grid-column: 1 / span 2;
+}
+.form_compra_boton button {
+    color: white;
+    margin: 20px 0;
+    padding: 15px 20px;
+    transition: .3s;
+    border-radius: 10px;
+    letter-spacing: .5px;
+    box-shadow: var(--boxShadow);
+    font-size: var(--button-sz);
+    background-color: var(--dark);
+}
+.form_compra_boton button:hover {
+    color: black;
+    background-color: var(--lima);
+}

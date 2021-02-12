@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/formulario.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="main.js">
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Header -->
+    <nav class="navMenu">
+        <div class="logoContainer logo">
+            <a href="index.html">
+                TRES-E
+            </a>
+        </div>
+
+        <div class="listContainer">
+            <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="catalogo.html">CATALOGO</a></li>
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Fin header -->
+    
+    <!-- Body -->
+    <div class="form_body_container">
+        <div class="form_container">
+            <div class="form_compra">
+                <div class="form_compra_title">
+                    <h2>
+                        Tus compras están seguras através a Paypal
+                    </h2>
+                </div>
+                <form class="form_compra_inputs">
+                    <label for="form_nombre">Nombre</label>
+                    <input id="form_nombre" type="text" placeholder="Nombre y Apellidos">
+
+                    <label for="form_fecha">fecha de nacimiento</label>
+                    <input id="form_fecha" type="text" placeholder="07/12/2020" required>
+
+                    <div class="form_ubicacion_ciudad">
+                        <label for="form_departamento">Departamento</label>
+                        <select name="form_departamento" id="form_departamento">
+                            <option value="0">-- Selecciona uno --</option>
+                            <option value="1">Amazonas</option>
+                            <option value="2">Antioquia</option>
+                            <option value="3">Arauca</option>
+                            <option value="4">Atlántico</option>
+                            <option value="5">Bogotá D.C.</option>
+                            <option value="6">Bolivar</option>
+                            <option value="7">Boyacá</option>
+                            <option value="8">Caldas</option>
+                            <option value="9">Caqueta</option>
+                            <option value="10">Casanare</option>
+                            <option value="11">Cauca</option>
+                            <option value="12">Cesar</option>
+                            <option value="13">Chocó</option>
+                            <option value="14">Chundinamarca</option>
+                            <option value="15">Córdoba</option>
+                            <option value="16">Guainía</option>
+                            <option value="17">Guaviare</option>
+                            <option value="18">Huila</option>
+                            <option value="19">Magdalena</option>
+                            <option value="20">Meta</option>
+                            <option value="21">Nariño</option>
+                            <option value="22">Norte de Santander</option>
+                            <option value="23">La Guajira</option>
+                            <option value="24">Putumayo</option>
+                            <option value="25">Quindío</option>
+                            <option value="26">Risaralda</option>
+                            <option value="27">San Andres y Providencia</option>
+                            <option value="28">Santander</option>
+                            <option value="29">Sucre</option>
+                            <option value="30">Tolima</option>
+                            <option value="31">Valle del Cauca</option>
+                            <option value="32">Vaupés</option>
+                            <option value="33">Vichada</option>
+                        </select>
+
+                        <label for="form_ciudad">Ciudad</label>
+                        <select name="form_ciudad" id="form_ciudad">
+                            <option value="0">-- Selecciona uno --</option>
+                        </select>
+                    </div>
+                    
+
+                    <div class="form_ubicacion_casa">
+                        <label for="form_direccion">Dirección</label>
+                        <input id="form_direccion" type="text" placeholder="Calle 54 # 86a-31 - Ejemplo">
+
+                        <label for="form_barrio">Barrio</label>
+                        <input id="form_barrio" type="text" placeholder="Opcional">
+                    </div>
+                    
+                    <label for="form_correo">Correo</label>
+                    <input id="form_correo" type="text" placeholder="ejemplo@correo.com" required>
+                    
+                    <label for="form_numero">Telefono de contacto</label>
+                    <input id="form_numero" type="text" placeholder="300 3222323 - Ejemplo">
+
+                    <div class="form_compra_boton">
+                        <button id="form_confirmar">CONFIRMAR</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Fin body -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footerContent">
+            <div class="subscribe">
+                <h2>
+                    SUSCRIBETE!
+                </h2>
+                <div class="sendEmail">
+                    <input type="text" placeholder="sample@correo.com" maxlength="24">
+                    <button class="sendEmailBtn">enviar</button>
+                </div>
+                <p>
+                    Y obten las mejores noticias y conocimientos para decorar tu hogar
+                </p>
+            </div>
+            <h3 class="designers">
+                Designed by <span>DESIGNERS</span>
+            </h3>
+        </div>
+    </footer>
+    <!-- Fin footer -->
+
+</body>
+</html>

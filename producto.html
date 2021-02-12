@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles/normalize.css"/>
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="stylesheet" href="styles/producto.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="main.js">
+    </script>
+    <title>Document</title>
+    <!-- Paypal SDK HERE! -->
+    <script
+    src="https://www.paypal.com/sdk/js?client-id=AThc65reHwcMcmbKvuWzpQNUK8OHtqlpTtxt62-mQ3X52hqkSYPixVU2ikRdbZh9Pq2NKbd5pdkHjrXM&currency=USD&vault=true">
+  </script>
+</head>
+<body>
+    
+    <!-- Header -->
+    <nav class="navMenu">
+        <div class="logoContainer logo">
+            <a href="index.html">
+                TRES-E
+            </a>
+        </div>
+
+        <div class="listContainer">
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="catalogo.html">CATALOGO</a></li>
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Fin header -->
+    
+    <!-- Body -->
+    <div class="just_container">
+        <div class="just_productContainer">
+            <div class="just_product">
+                <div class="just_imgContainer image">
+                    <figure class="just_productImg">
+                        <img src="img/prod2.jpg" alt=""/>
+                    </figure>
+                </div>
+                <div class="just_botonContainer botones">
+                    <h2 class="just_title nombre">
+                        NOMBRE
+                    </h2>
+                    <div class="just_botones">
+                        <div class="mas_menos">
+                            <button id="mas">+</button>
+                            <p class="icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </p>
+                            <button id="menos">--</button>
+                        </div>
+                        <a href="formulario.html">
+                            <!-- <button id="comprar">COMPRAR</button> -->
+                            <div id="paypal-button-container"></div>
+                            <form id="paypal-form" action="/index.html" method="POST">
+                                <input type="hidden" name="details" id="input-details"/>
+                            </form>
+                        </a>
+                    </div>
+                </div>
+                <div class="just_description description_area">
+
+                    <div class="just_description_price">
+                        <p><strong>Precio: </strong> 24.99</p>
+                    </div>
+
+                    <h2>
+                        Descripción
+                    </h2>
+                    <p>
+                        Esta es la descripción del producto
+                    </p>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <!-- Fin body -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footerContent">
+            <div class="subscribe">
+                <h2>
+                    SUSCRIBETE!
+                </h2>
+                <div class="sendEmail">
+                    <input type="text" placeholder="sample@correo.com" maxlength="24">
+                    <button class="sendEmailBtn">enviar</button>
+                </div>
+                <p>
+                    Y obten las mejores noticias y conocimientos para decorar tu hogar
+                </p>
+            </div>
+            <h3 class="designers">
+                Designed by <span>DESIGNERS</span>
+            </h3>
+        </div>
+    </footer>
+    <!-- Fin footer -->
+
+    <script>
+        paypal.Buttons({
+    createOrder: function(data, actions) {
+      // This function sets up the details of the transaction, including the amount and line item details.
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '6.68'
+          }
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details){
+            alert(`Transacción completada`)
+            let paypalForm = document.getElementById('paypal-form')
+            let inputDetails = document.getElementById('input-details')
+
+            let jsonDetails = JSON.stringify(details)
+            
+            inputDetails.value = jsonDetails
+            paypalForm.submit()
+        })
+        // alert('Transacción creada')
+    }
+    }).render('#paypal-button-container');
+        // This function displays Smart Payment Buttons on your web page.
+      </script>
+</body>
+</html>
